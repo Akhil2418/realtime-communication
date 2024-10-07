@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="username-section">
+            <h2>Welcome to the Chat Room</h2>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button id="enter-chat">Start Chat</button>
+        </div>
+        
+        <div id="chat-section" style="display:none;">
+            <h2>Chat Room</h2>
+            <p>Send this link to invite others:</p>
+
+
+
+            
+            <div class="link-container">
+                <button id="copy-link">Copy</button>
+                <input type="text" id="room-link" readonly>
+            </div>
+            <div id="chat-box"></div>
+
+            <div class="message-area">
+                <input type="text" id="message" placeholder="Type a message..." autocomplete="off">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
